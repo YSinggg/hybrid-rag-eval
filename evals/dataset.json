@@ -1,0 +1,107 @@
+[
+  {
+    "id": "sev1-sla",
+    "question": "What is the initial acknowledgement SLA and update frequency for a SEV-1 incident?",
+    "expected_source": "incident_runbook.md",
+    "expected_keywords": ["5 minutes", "15 minutes", "#inc-war-room"],
+    "expected_grounded": true
+  },
+  {
+    "id": "sev2-threshold",
+    "question": "When is an incident classified as SEV-2?",
+    "expected_source": "incident_runbook.md",
+    "expected_keywords": ["10%", "15 minutes", "30 minutes"],
+    "expected_grounded": true
+  },
+  {
+    "id": "db-pool-exhausted",
+    "question": "What recovery steps should we run when ERR_DB_POOL_EXHAUSTED happens?",
+    "expected_source": "incident_runbook.md",
+    "expected_keywords": ["pg_stat_activity", "argocd app rollback", "PG_POOL_MAX_SIZE"],
+    "expected_grounded": true
+  },
+  {
+    "id": "primary-db-restart",
+    "question": "Can an engineer restart the primary database instance on their own during an outage?",
+    "expected_source": "incident_runbook.md",
+    "expected_keywords": ["Incident Commander", "Never restart"],
+    "expected_grounded": true
+  },
+  {
+    "id": "postmortem-timeline",
+    "question": "How soon must a blameless post-mortem be opened after resolution?",
+    "expected_source": "incident_runbook.md",
+    "expected_keywords": ["24 hours", "14 days"],
+    "expected_grounded": true
+  },
+  {
+    "id": "key-rotation",
+    "question": "How often do production API keys need to be rotated?",
+    "expected_source": "api_rate_limits.md",
+    "expected_keywords": ["90 days", "two active keys", "48-hour"],
+    "expected_grounded": true
+  },
+  {
+    "id": "leaked-key-github",
+    "question": "What happens if an API key is accidentally exposed in a public repository?",
+    "expected_source": "api_rate_limits.md",
+    "expected_keywords": ["revoked", "60 seconds"],
+    "expected_grounded": true
+  },
+  {
+    "id": "pro-tier-quota",
+    "question": "What are the requests per minute and payload limits on the Pro tier?",
+    "expected_source": "api_rate_limits.md",
+    "expected_keywords": ["600", "100", "10 MB"],
+    "expected_grounded": true
+  },
+  {
+    "id": "rate-429-backoff",
+    "question": "How should a client handle ERR_RATE_429 responses?",
+    "expected_source": "api_rate_limits.md",
+    "expected_keywords": ["Retry-After", "exponential backoff", "jitter"],
+    "expected_grounded": true
+  },
+  {
+    "id": "pr-ci-gates",
+    "question": "What checks are required before a pull request can be merged into main?",
+    "expected_source": "onboarding_handbook.md",
+    "expected_keywords": ["80%", "ruff", "CODEOWNERS"],
+    "expected_grounded": true
+  },
+  {
+    "id": "canary-rollout",
+    "question": "How does the production canary rollout progress?",
+    "expected_source": "onboarding_handbook.md",
+    "expected_keywords": ["5%", "50%", "0.2%"],
+    "expected_grounded": true
+  },
+  {
+    "id": "oncall-readiness",
+    "question": "When do new engineers join the primary on-call rotation?",
+    "expected_source": "onboarding_handbook.md",
+    "expected_keywords": ["30 days", "two live incident shifts"],
+    "expected_grounded": true
+  },
+  {
+    "id": "week1-setup",
+    "question": "What tools are used for local development setup during Week 1?",
+    "expected_source": "onboarding_handbook.md",
+    "expected_keywords": ["uv", "Docker Compose", "Makefile"],
+    "expected_grounded": true
+  },
+  {
+    "id": "unanswerable-pto",
+    "question": "How many days of paid parental leave does the company offer?",
+    "expected_source": null,
+    "expected_keywords": [],
+    "expected_grounded": false
+  },
+  {
+    "id": "unanswerable-pricing",
+    "question": "What is the monthly subscription price in USD for the Enterprise plan?",
+    "expected_source": null,
+    "expected_keywords": [],
+    "expected_grounded": false
+  }
+]
