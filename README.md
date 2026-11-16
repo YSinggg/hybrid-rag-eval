@@ -4,6 +4,7 @@
 
 **Production-structured Hybrid Search (BM25 + Dense Vector + RRF) Document Q&A API with Grounded Citations, Abstention Guardrails, and Automated Evals.**
 
+[![CI](https://github.com/YSinggg/hybrid-rag-eval/actions/workflows/ci.yml/badge.svg)](https://github.com/YSinggg/hybrid-rag-eval/actions/workflows/ci.yml)
 [![Python 3.14+](https://img.shields.io/badge/python-3.14%2B-blue.svg)](https://www.python.org/downloads/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.163%2B-009688.svg)](https://fastapi.tiangolo.com/)
 [![uv](https://img.shields.io/badge/pkg-uv-DE5FE9.svg)](https://docs.astral.sh/uv/)
@@ -101,7 +102,7 @@ Measured across **15 curated test cases** in [`evals/dataset.json`](evals/datase
 ### 1. Run Locally (Offline Mode — No API Key Required)
 
 ```bash
-git clone https://github.com/<YOUR_USERNAME>/hybrid-rag-eval.git
+git clone https://github.com/YSinggg/hybrid-rag-eval.git
 cd hybrid-rag-eval
 
 # Install dependencies and editable package
